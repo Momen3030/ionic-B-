@@ -1,8 +1,19 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar>
+      <ion-title>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+                <ion-icon name="person-add"></ion-icon> Registration
+            </ion-col>
+            <ion-col class="back">
+                 <a href="#">back</a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>  
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content padding>
        
@@ -31,6 +42,6 @@
         <ion-input  type="password" value=""   placeholder="Confirm Password" ></ion-input>
      </ion-item>
      <br>
-     <ion-button   color="primary"    expand="full">Next</ion-button>
+     <ion-button       expand="full">Next</ion-button>
 </ion-content>
 

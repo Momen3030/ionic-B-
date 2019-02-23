@@ -1,9 +1,18 @@
-ion-item{
-  color:red;
-  font-weight: bolder;
-  text-align: end;
+ion-header ion-toolbar{
+  --background:#721313;
+  --color:#fff;
 }
+ion-header ion-toolbar ion-col.back{
+  text-align: end;
+  
+  }
+  ion-header ion-toolbar ion-col.back a{
+      text-decoration: none;
+      color: #fff;
+      
+      }
+
 ion-button {
-  --background: red;
-  --color:green;
+  --background: #8edfb0;
+  --color:#000;
 }

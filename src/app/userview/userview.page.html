@@ -1,18 +1,70 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>userview</ion-title>
+    <ion-title>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+              {{user.name}} Profile
+          </ion-col>
+          <ion-col class="back">
+               <a href="#">back</a>
+          </ion-col>
+        </ion-row>
+      </ion-grid>  
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-    <ion-img src="http://localhost:8000/storage/users/{{user.img}}"></ion-img> 
-   {{user.name}}
+    <!-- <ion-img src="http://localhost:8000/storage/users/{{user.img}}"></ion-img>  -->
   
-   {{user.city}}
-
-   {{user.blood_type}} 
-
-   {{user.phone}}
-
-   {{user.gender}}
+  
+      <ion-grid>
+        <ion-row class="img">
+          <ion-col>
+             <!-- <ion-img src="http://localhost:8000/storage/users/{{user.img}}"></ion-img>  -->
+             <ion-img src="../../assets/img/team-2.jpg"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row class="odd">
+          <ion-col class="index">
+            Name  
+          </ion-col>
+          <ion-col class="value">
+            {{user.name}} 
+           </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="index">
+              city  
+          </ion-col>
+          <ion-col class="value">
+            {{user.city}} 
+          </ion-col>
+        </ion-row>
+        <ion-row class="odd">
+          <ion-col class="index">
+            Blood type 
+          </ion-col>
+          <ion-col class="value">
+            {{user.blood_type}} 
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="index">
+            phone
+          </ion-col>
+          <ion-col class="value">
+            {{user.phone}}
+          </ion-col>
+        </ion-row>
+        <ion-row class="odd">
+          <ion-col class="index">
+            Gender
+          </ion-col>
+          <ion-col class="value">
+            {{user.gender}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 </ion-content>

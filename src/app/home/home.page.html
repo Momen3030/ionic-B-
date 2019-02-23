@@ -4,12 +4,12 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-    <ion-searchbar placeholder="Filter Schedules"></ion-searchbar>
+  <ion-searchbar placeholder="Blood Types"></ion-searchbar>
   <ion-card *ngFor="let user of users">
     <ion-card-header >
         <ion-item> 
@@ -24,7 +24,7 @@
     </ion-card-content>
     <ion-item>
     <!-- <ion-button fill="outline"  (click)="ViewUser(user.id)" slot="end">View</ion-button> -->
-    <ion-button fill="outline" href="/userview/{{user.id}}"  slot="end">View</ion-button>
+    <ion-button  href="/userview/{{user.id}}"  slot="end">View</ion-button>
   </ion-item>
   </ion-card>
   
