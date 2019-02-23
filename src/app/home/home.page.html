@@ -9,15 +9,15 @@
 </ion-header>
 
 <ion-content>
-
+    <ion-searchbar placeholder="Filter Schedules"></ion-searchbar>
   <ion-card *ngFor="let user of users">
-    <ion-card-header>
+    <ion-card-header >
         <ion-item> 
-             <ion-img src="http://localhost:8000/storage/users/{{user.img}}"></ion-img> 
-            <!-- <ion-img src="../../assets/shapes.svg"></ion-img> -->
-        </ion-item>
-        <br>
-      <ion-card-title>{{user.name}}</ion-card-title>
+          
+             <!-- <ion-img src="http://localhost:8000/storage/users/{{user.img}}"></ion-img>  -->
+            <ion-img src="../../assets/img/team-2.jpg"></ion-img>
+        </ion-item> <br>
+       <ion-card-title>{{user.name}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
         {{user.blood_type}}
@@ -26,4 +26,5 @@
     <ion-button fill="outline" (click)="ViewUser(user.id)" slot="end">View</ion-button>
   </ion-item>
   </ion-card>
+  
 </ion-content>
