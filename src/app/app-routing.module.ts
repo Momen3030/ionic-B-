@@ -15,7 +15,10 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-  { path: 'userview', loadChildren: './userview/userview.module#UserviewPageModule' },
+  // { path: 'userview', loadChildren: './userview/userview.module#UserviewPageModule' },
+
+  { path: 'userview/:id', loadChildren: './userview/userview.module#UserviewPageModule'  },
+
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' }
 ];

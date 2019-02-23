@@ -23,7 +23,8 @@
         {{user.blood_type}}
     </ion-card-content>
     <ion-item>
-    <ion-button fill="outline" (click)="ViewUser(user.id)" slot="end">View</ion-button>
+    <!-- <ion-button fill="outline"  (click)="ViewUser(user.id)" slot="end">View</ion-button> -->
+    <ion-button fill="outline" href="/userview/{{user.id}}"  slot="end">View</ion-button>
   </ion-item>
   </ion-card>
 </ion-content>

@@ -27,17 +27,11 @@ export class RestApiService {
        catchError(err => of([]))
    );
 
-  // apiUrl = 'https://jsonplaceholder.typicode.com';
-  
-  //  getUsers() {
-  //   return new Promise(resolve => {
-  //     this.http.get(`${environment.URL}users`).subscribe(data => {
-  //       resolve(data);
-  //     }, err => {
-  //       console.log(err);
-  //     });
-  //   });
-  // }
+   getUserByID(usrID: string) {
+    const ApiUrl = `${environment.URL}user/${usrID}`;
+    console.log(ApiUrl);
+    return this.http.get(ApiUrl);
+}
 
 
 
