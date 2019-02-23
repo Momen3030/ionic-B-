@@ -4,27 +4,27 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-
+  <ion-searchbar placeholder="Blood Types"></ion-searchbar>
   <ion-card *ngFor="let user of users">
-    <ion-card-header>
+    <ion-card-header >
         <ion-item> 
              <ion-img src="http://localhost:8000/storage/users/{{user.img}}"></ion-img> 
-            <!-- <ion-img src="../../assets/shapes.svg"></ion-img> -->
-        </ion-item>
-        <br>
-      <ion-card-title>{{user.name}}</ion-card-title>
+            <!-- <ion-img src="../../assets/img/team-2.jpg"></ion-img> -->
+        </ion-item> <br>
+       <ion-card-title>{{user.name}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
         {{user.blood_type}}
     </ion-card-content>
     <ion-item>
     <!-- <ion-button fill="outline"  (click)="ViewUser(user.id)" slot="end">View</ion-button> -->
-    <ion-button fill="outline" href="/userview/{{user.id}}"  slot="end">View</ion-button>
+    <ion-button  href="/userview/{{user.id}}"  slot="end">View</ion-button>
   </ion-item>
   </ion-card>
+  
 </ion-content>

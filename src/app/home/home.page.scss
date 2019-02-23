@@ -1,4 +1,35 @@
-.welcome-card ion-img {
-  max-height: 35vh;
-  overflow: hidden;
+
+ion-toolbar{
+  --background:#721313;
+  --color:#fff;
+
 }
+ion-menu-button{
+  --color:#fff;
+}
+ion-searchbar{
+  --background:#8edfb0;
+  --placeholder-color:#000;
+  --placeholder-font-weight:bolder;
+  --icon-color:#000;
+  
+}
+ion-card{
+  box-shadow: 0 4px 8px 0 rgba(4, 75, 39, 0.2), 0 6px 20px 0 rgba(4, 75, 39, 0.2);
+  border-radius: 20px;
+  border: 1px solid rgb(199, 194, 194)
+}
+ion-card-title{
+  --color:#4b0808;
+}
+
+ion-button{
+  --background:#721313;
+  --color:#fff;
+ 
+  
+}
+
+
+
+

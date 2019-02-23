@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestApiService } from '../services/rest-api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,13 +11,13 @@ export class LoginPage implements OnInit {
   users:any;
   username: string ='';
   password: string ='';
-  constructor(private _UserService:RestApiService ) { }
+  constructor(private _UserService:RestApiService ,private router: Router ) { }
  
   ngOnInit() {
 
-    // this._UserService.apiData.subscribe(
-    //   (users) => { this.users = users.data;
-    //       console.log(this.users); });
+    this._UserService.apiData.subscribe(
+      (users) => { this.users = users.data;
+          console.log(this.users); });
   }
   
 
@@ -24,19 +25,20 @@ export class LoginPage implements OnInit {
   login() {
       
 
-       console.log(this.username);
+       console.log(`${this.username} password: ${this.password} `);
     
-        // for (let i = 0; i < this.users.length; i++) {
+        for (let i = 0; i < this.users.length; i++) {
            
-        //       if (this.users[i].email === this.form.value.email
-        //          && this.users[i].userpass === this.form.value.password){
-        //         this.myRoute.navigate(['cartproducts']); 
-        //         } 
-        //     else {
-        //         this.myRoute.navigate(['home']);
-        //     }
+              if (this.users[i].username === this.username
+                 && this.users[i].password === this.password){
+                  this.router.navigateByUrl('/register');
+                } 
+            else {
+              this.router.navigateByUrl('/home');
+            }
         
     }
+  }
 
 
 
