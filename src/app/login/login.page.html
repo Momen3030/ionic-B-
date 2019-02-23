@@ -8,13 +8,15 @@
       <ion-content padding>
        
           <ion-item>
-              <ion-input type="text" value=""   placeholder="user name" ></ion-input>
+              <ion-input type="text" [(ngModel)]="username"   placeholder="user name" ></ion-input>
             </ion-item>
             <br>
             <ion-item>
-                    <ion-input type="password"  value=""   placeholder="password"   ></ion-input>
+                    <ion-input type="password"  [(ngModel)]="password"  placeholder="password"   ></ion-input>
            </ion-item>
            <br>
-           <ion-button  color="success"  expand="full">Login</ion-button>
+           
+           <ion-button  color="success" (click)="login()" expand="full">Login</ion-button>
+          
       </ion-content>
       
